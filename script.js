@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Here you would typically send the form data to a server
             // For now, we'll just show an alert
-            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+            alert(`This functionality is not available yet. Reach out via email.`);
             
             // Reset form
             contactForm.reset();
