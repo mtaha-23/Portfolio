@@ -229,6 +229,8 @@ header .container {
 /* Home Section */
 #home {
   padding-top: 120px;
+  position: relative;
+  min-height: 100vh;
 }
 
 .home-content {
@@ -319,13 +321,16 @@ header .container {
 }
 
 .scroll-indicator {
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .mouse {

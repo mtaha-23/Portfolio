@@ -3,7 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
     
+    // Hide scroll indicator when not in home section
+    function updateScrollIndicator() {
+        const homeSection = document.querySelector('#home');
+        const homeSectionBottom = homeSection.offsetTop + homeSection.offsetHeight;
+        const scrollPosition = window.scrollY + window.innerHeight;
+        
+        if (scrollPosition > homeSectionBottom) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.visibility = 'hidden';
+        } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.visibility = 'visible';
+        }
+    }
+
+    window.addEventListener('scroll', updateScrollIndicator);
+    updateScrollIndicator(); // Call once on page load
+
     menuToggle.addEventListener('click', function() {
         mobileNav.classList.toggle('active');
         menuToggle.classList.toggle('active');
