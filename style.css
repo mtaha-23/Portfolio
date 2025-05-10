@@ -18,6 +18,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: default;
+}
+
+/* Custom cursor styles for interactive elements */
+a, button, .btn, .nav-link, .social-icon, .skill-item, .interest-tag, 
+.project-card, .cert-item, .experience-item, .contact-icon, .github-link {
+  cursor: pointer;
+}
+
+input, textarea {
+  cursor: text;
+}
+
+/* Disable pointer events for non-interactive elements */
+.scroll-indicator, .mouse, .wheel {
+  pointer-events: none;
 }
 
 html {
@@ -228,7 +244,7 @@ header .container {
 
 /* Home Section */
 #home {
-  padding-top: 120px;
+  padding-top: 170px;
   position: relative;
   min-height: 100vh;
 }
@@ -564,11 +580,24 @@ header .container {
   background: var(--card-color);
   border-radius: 8px;
   transition: var(--transition);
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+  width: 100%;
 }
 
 .cert-item:hover {
   transform: translateX(10px);
   box-shadow: var(--shadow);
+  background: linear-gradient(145deg, #1e1e32, #16162a);
+}
+
+.cert-item:hover .cert-icon {
+  color: var(--primary-color);
+}
+
+.cert-item:hover h3 {
+  color: var(--primary-color);
 }
 
 .cert-icon {
@@ -579,6 +608,16 @@ header .container {
 .cert-content h3 {
   margin-bottom: 5px;
   font-size: 1.1rem;
+}
+
+.cert-content h3 a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.cert-content h3 a:hover {
+  color: var(--primary-color);
 }
 
 .cert-content p {
@@ -763,6 +802,32 @@ header .container {
 
 .experience-subject h4 {
   margin-bottom: 5px;
+}
+
+.experience-subject h4 a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+.experience-subject h4 a:hover {
+  color: var(--primary-color);
+}
+
+.experience-subject h4 a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.experience-subject h4 a:hover::after {
+  width: 100%;
 }
 
 .experience-subject p {
