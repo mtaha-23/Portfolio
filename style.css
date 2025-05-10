@@ -638,21 +638,37 @@ header .container {
   border-radius: 8px;
   overflow: hidden;
   transition: var(--transition);
-  height: 300px;
+  height: 400px;
   box-shadow: var(--shadow);
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
 }
 
 .project-icon {
   position: absolute;
-  top: 20px;
+  top: 160px;
   right: 20px;
   width: 50px;
   height: 50px;
-  background: rgba(108, 92, 231, 0.1);
+  background: var(--card-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -660,6 +676,7 @@ header .container {
   font-size: 1.5rem;
   color: var(--primary-color);
   z-index: 3;
+  box-shadow: var(--shadow);
 }
 
 .project-content {
@@ -669,15 +686,14 @@ header .container {
   width: 100%;
   padding: 20px;
   z-index: 2;
-  transform: translateY(60%);
-  transition: transform 0.5s ease;
-  height: 85%;
+  background: linear-gradient(to top, var(--card-color) 80%, transparent);
+  height: 200px;
   display: flex;
   flex-direction: column;
 }
 
-.project-card:hover .project-content {
-  transform: translateY(0);
+.project-card:hover {
+  transform: translateY(-10px);
 }
 
 .project-content h3 {
