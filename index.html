@@ -9,36 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
     <!-- Header -->
     <header>
-        <div class="logo">
-            <span><a href="#home">MT</a></span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">MT</a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Home Section -->
     <section id="home" class="section">
@@ -62,7 +67,7 @@
                 </div>
                 <div class="home-image">
                     <div class="image-container">
-                        <div class="hexagon"></div>
+                        <div class="circle-bg"></div>
                         <img src="taha.png" alt="Muhammad Taha" class="profile-img">
                     </div>
                 </div>
@@ -70,11 +75,6 @@
             <div class="scroll-indicator">
                 <div class="mouse">
                     <div class="wheel"></div>
-                </div>
-                <div class="arrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
             </div>
         </div>
@@ -88,12 +88,18 @@
                 <div class="about-text">
                     <h3 class="about-subtitle">Who am I?</h3>
                     <p>
-                        I'm a passionate Computer Science student at FAST NUCES with a strong foundation in problem-solving 
-                        and analytical thinking. I have the ability to collaborate effectively with others to achieve project goals.
+                        Hi! I’m Muhammad Taha — a passionate Computer Science student at FAST NUCES with a strong foundation 
+                        in problem-solving, analytical thinking, and software development.
                     </p>
                     <p>
-                        I'm seeking opportunities that will provide hands-on experience in the field. I'm passionate about 
-                        learning new technologies and eager to contribute to a dynamic team environment.
+                        I love building meaningful projects that solve real-world problems, whether it’s developing web platforms, 
+                        designing algorithms, or working with data. My journey has been shaped by a constant curiosity to learn new 
+                        technologies and a drive to improve my skills every day.
+                    </p>
+                    <p>
+                        Beyond coding, I enjoy collaborating in teams, taking on leadership roles, and contributing to impactful initiatives 
+                        like TEDxFAST Faisalabad and VANAR. I’m currently looking for opportunities to gain hands-on experience, work with talented teams, 
+                        and make a positive contribution to the tech world.</p>
                     </p>
                     <div class="social-links">
                         <a href="https://linkedin.com/in/muhammad--taha" target="_blank" class="social-icon" title="LinkedIn">
@@ -105,62 +111,61 @@
                         <a href="https://github.com/mtaha-23" target="_blank" class="social-icon" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                         </div>
-                    <!-- Added prominent CV download button -->
+                    </div>
                     <div class="cv-download">
-                        <a href="Muhammad_Taha_Resume.pdf" class="btn primary-btn" download="Muhammad_Taha_Resume.pdf">
-                            <i class="fas fa-download mr-2"></i> Download Resume
+                        <a href="Muhammad_Taha_Resume.pdf" class="btn primary-btn" download>
+                            <i class="fas fa-download"></i> Download Resume
                         </a>
                     </div>
                 </div>
                 <div class="skills-container">
                     <h3 class="about-subtitle">My Skills</h3>
                     <div class="skills-grid">
-                        <div class="skill-item" data-skill="React">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-react"></i></div>
                             <span>React</span>
                         </div>
-                        <div class="skill-item" data-skill="Node.js">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-node-js"></i></div>
                             <span>Node.js</span>
                         </div>
-                        <div class="skill-item" data-skill="JavaScript">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-js"></i></div>
                             <span>JavaScript</span>
                         </div>
-                        <div class="skill-item" data-skill="Express">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-server"></i></div>
                             <span>Express</span>
                         </div>
-                        <div class="skill-item" data-skill="C++">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-code"></i></div>
                             <span>C++</span>
                         </div>
-                        <div class="skill-item" data-skill="HTML">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-html5"></i></div>
                             <span>HTML</span>
                         </div>
-                        <div class="skill-item" data-skill="CSS">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
                             <span>CSS</span>
                         </div>
-                        <div class="skill-item" data-skill="Python">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fab fa-python"></i></div>
                             <span>Python</span>
                         </div>
-                        <div class="skill-item" data-skill="SQL">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-database"></i></div>
                             <span>SQL</span>
                         </div>
-                        <div class="skill-item" data-skill="Oracle">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-server"></i></div>
                             <span>Oracle</span>
                         </div>
-                        <div class="skill-item" data-skill="Visual Studio">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
                             <span>Visual Studio</span>
                         </div>
-                        <div class="skill-item" data-skill="MS Word">
+                        <div class="skill-item">
                             <div class="skill-icon"><i class="far fa-file-word"></i></div>
                             <span>MS Word</span>
                         </div>
@@ -339,42 +344,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Ride Booking System</h3>
-                        <p class="project-date">May 2023</p>
-                        <p class="project-description">
-                            Developed Transport Management System in C++ using OOP concepts, where customer can book a ride or transport goods
-                            and the driver can choose to accept or reject rides.
-                        </p>
-                        <div class="project-tech">
-                            <span>C++</span>
-                            <span>OOP</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-dice"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>BINGO Game</h3>
-                        <p class="project-date">December 2022</p>
-                        <p class="project-description">
-                            A two-player console base game designed in C++, implementing basic programming principles 
-                            (functions, arrays and loops).
-                        </p>
-                        <div class="project-tech">
-                            <span>C++</span>
-                            <span>Console</span>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="github-link-container">
                 <a href="https://github.com/mtaha-23" target="_blank" class="github-link">
@@ -474,19 +443,19 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder=" " required>
                             <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder=" " required>
                             <label for="email">Your Email</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
                             <label for="subject">Subject</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
                             <label for="message">Your Message</label>
                         </div>
                         <button type="submit" class="btn primary-btn">Send Message</button>
@@ -501,7 +470,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span><a href="#home">MT</a></span>
+                    <a href="#home">MT</a>
                 </div>
                 <p>&copy; 2025 Muhammad Taha. All Rights Reserved.</p>
                 <div class="footer-social">
@@ -519,180 +488,6 @@
         </div>
     </footer>
 
-    <script>
-        // Preloader
-        window.addEventListener('load', function() {
-            document.querySelector('.preloader').classList.add('fade-out');
-            setTimeout(() => {
-                document.querySelector('.preloader').style.display = 'none';
-            }, 1000);
-        });
-
-        // Custom cursor
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-
-        document.addEventListener('mousemove', function(e) {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            
-            setTimeout(() => {
-                cursorFollower.style.left = e.clientX + 'px';
-                cursorFollower.style.top = e.clientY + 'px';
-            }, 100);
-        });
-
-        document.addEventListener('mousedown', function() {
-            cursor.classList.add('cursor-active');
-            cursorFollower.classList.add('cursor-follower-active');
-        });
-
-        document.addEventListener('mouseup', function() {
-            cursor.classList.remove('cursor-active');
-            cursorFollower.classList.remove('cursor-follower-active');
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update active nav link
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('nav');
-        
-        menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-
-        // Scroll animations
-        const sections = document.querySelectorAll('.section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', function() {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-            
-            // Animate elements on scroll
-            document.querySelectorAll('.section').forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (sectionTop < windowHeight * 0.75) {
-                    section.classList.add('animate');
-                }
-            });
-        });
-
-        // Project cards hover effect - FIXED
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        projectCards.forEach(card => {
-            // Add active class on mouseenter
-            card.addEventListener('mouseenter', function() {
-                projectCards.forEach(c => c.classList.remove('active'));
-                this.classList.add('active');
-            });
-        
-            // Remove active class on mouseleave
-            card.addEventListener('mouseleave', function() {
-                this.classList.remove('active');
-            });
-        });
-
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll just show an alert
-            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-
-        // Skill items hover effect
-        const skillItems = document.querySelectorAll('.skill-item');
-        
-        skillItems.forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.classList.add('active');
-            });
-        
-            item.addEventListener('mouseleave', function() {
-                this.classList.remove('active');
-            });
-        });
-
-        // Initialize animations when page loads
-        window.addEventListener('DOMContentLoaded', function() {
-            setTimeout(() => {
-                document.querySelector('#home').classList.add('animate');
-            }, 1000);
-        });
-        
-        // CV download fallback for browsers that don't support the download attribute
-        document.querySelectorAll('a[download]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                const isDownloadSupported = 'download' in document.createElement('a');
-                
-                if (!isDownloadSupported) {
-                    e.preventDefault();
-                    window.open(this.href, '_blank');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
