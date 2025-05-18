@@ -157,4 +157,42 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Typing animation for subtitle
+    const animatedSubtitle = document.getElementById('animated-subtitle');
+    if (animatedSubtitle) {
+        const roles = [
+            'Student',
+            'Web Developer',
+            'Teaching Assistant'
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 120;
+        let pauseTime = 1000;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                animatedSubtitle.textContent = currentRole.substring(0, charIndex--);
+                if (charIndex < 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(type, 400);
+                } else {
+                    setTimeout(type, typingSpeed / 2);
+                }
+            } else {
+                animatedSubtitle.textContent = currentRole.substring(0, charIndex++);
+                if (charIndex > currentRole.length) {
+                    isDeleting = true;
+                    setTimeout(type, pauseTime);
+                } else {
+                    setTimeout(type, typingSpeed);
+                }
+            }
+        }
+        type();
+    }
 });
